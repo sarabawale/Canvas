@@ -34,23 +34,41 @@ button:active {
   transform: translateY(4px);
 }
 
+input[type="color"]{
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+input[type="text"]:focus{
+  outline: none;
+}
+
 .menu{
-  float: left;
   display: inline-block;
-  margin-right: 5em;
-  margin-left: 2em;
+  margin: 2em;
+  text-align: center;
 }
 
 .wrapper{
   min-width: 100px;
-  display: inline-block;
-  margin: 0 auto;
+  display: block;
+  margin: auto;
   padding: 2px;
+  text-align: center;
+  cursor: pointer;
 }
 
 .num-rows-cols{
-  padding: 1em;
-  border: none;
+  border-bottom: 2px dotted black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: none;
+  font-family: inherit;
+  font-size: 20px;
+  max-width: 100px;
+  text-align: center;
 }
 
 .box{

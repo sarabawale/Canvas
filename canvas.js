@@ -1,31 +1,26 @@
 $(document).ready(function(){
   
   //set background color
-  var background = $(".bkgd-color").val();
-  $(".box").css("background-color", background);
+  $(".bkgd-color").on("change", function(){
+    var background = $(".bkgd-color").val();
+    $(".box").css("background-color", background);
+  })
 
-  //set number of rows/columns
-  $(".submit").on("click", function(){
-    rowCol = $("num-rows-cols").val();
+  $(".reset").on("click", function(){
+    var background = $(".bkgd-color").val();
+    $(".box").css("background-color", background);
   });
 
-  if($("num-rows-cols").val() === null){
+  //set number of rows/columns
+  var defaultNum = 10;
+  createGrid(defaultNum);
 
-  }
+  $(".submit").on("click", function(){
+      userNum = $(".num-rows-cols").val();
+      console.log(userNum)
+      createGrid(userNum);
+  });
 
-  var rowCol = 10;
-
-  //create grid
-  for(var i=0; i<rowCol; i++){
-      var row = $('<div>').addClass('row');
-      for(var j=0; j<rowCol; j++){
-        var box = $('<div>').addClass('box box-' + i + '-' + j);
-        row.append(box);
-      }
-
-      $('.wrapper').append(row);
-    }
-  
   //change box color
   $('.box').on("click", function(){ 
       var color = $(".color").val();
@@ -34,4 +29,18 @@ $(document).ready(function(){
 
 });
 
+//create grid
+var createGrid = function(rowCol){
+  //empty the grid container
+  $(".wrapper").empty();
 
+  for(var i=0; i<rowCol; i++){
+      var row = $("<div>").addClass("row");
+      for(var j=0; j<rowCol; j++){
+        var box = $("<div>").addClass("box box-" + i + "-" + j);
+        row.append(box);
+      }
+
+      $(".wrapper").append(row);
+  }
+}
