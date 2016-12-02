@@ -7,29 +7,28 @@ body{
 h1{
   text-align: center;
   font-size: 45px;
-  padding-bottom: 1em;
 }
 
 button {
   padding: 10px 20px;
-  font-size: 14px;
+  font-size: 15px;
   font-family: inherit;
   text-align: center;
   cursor: pointer;
   outline: none;
   color: #fff;
-  background-color: #4CAF50;
+  background-color: #61b4c6;
   border: none;
   border-radius: 10px;
   box-shadow: 0 5px #999;
 }
 
 button:hover {
-  background-color: #3e8e41
+  background-color: #3b91a5
 }
 
 button:active {
-  background-color: #3e8e41;
+  background-color: #3b91a5;
   box-shadow: 0 2px #666;
   transform: translateY(4px);
 }
@@ -45,9 +44,20 @@ input[type="text"]:focus{
 }
 
 .menu{
-  display: inline-block;
-  margin: 2em;
+  display: block;
+  margin: auto;
   text-align: center;
+}
+
+label{
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+  font-size: 20px;
+}
+
+.color, .bkgd-color{
+  margin-right: 10px;
 }
 
 .wrapper{
