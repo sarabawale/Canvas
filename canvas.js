@@ -9,7 +9,7 @@ $(document).ready(function(){
     rowCol = $("num-rows-cols").val();
   });
 
-    if($("num-rows-cols").val() === null){
+  if($("num-rows-cols").val() === null){
 
   }
 
